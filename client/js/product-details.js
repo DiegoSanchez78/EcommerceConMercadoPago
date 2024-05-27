@@ -1,6 +1,3 @@
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
     loadCartFromLocalStorage();
     const detallesContainer = document.getElementById("detalles");
@@ -8,24 +5,29 @@ document.addEventListener("DOMContentLoaded", function() {
     // Obtén el ID del producto de la URL
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
+    console.log("ID del producto:", productId);
 
     // Realiza una solicitud para obtener los detalles del producto con el ID dado
     // Esta solicitud podría ser a una API o a un archivo JSON que contenga los detalles del producto
-    fetch(`https://api.escuelajs.co/api/v1/products?id=${productId}`)
+    fetch(`https://api.escuelajs.co/api/v1/products/${productId}`)
         .then(response => response.json())
         .then(data => {
+            console.log("Detalles del producto:", data);
+
             // Muestra los detalles del producto en el contenedor de detalles
-            // Verifica si se encontró un producto con el ID dado
-            
-            if (data && data.length > 0) {
-                const product = data[0]; // Si la respuesta es un array, toma el primer elemento
+            if (data) {
+                const product = data;
+                console.log("Detalles del producto:", product);
+
                 detallesContainer.innerHTML = `
-                    <h2>${product.title}</h2>
+                    <h2 class="titleDescription">${product.title}</h2>
                     <div class="img-and-details">
-                        <img class="img-details" src="${product.images[0]}}">
+                        <img class="img-details" src="${product.images[0]}" alt="${product.title}">
                         <p>${product.description}</p>
                     </div>
-                    <p class="price">$ ${product.price}</p>
+                    <div class="price">
+                    <p class="titleDescription">Precio $ ${product.price}</p>
+                    </div>
                 `;
             } else {
                 detallesContainer.innerHTML = `<p>No se encontraron detalles para este producto.</p>`;

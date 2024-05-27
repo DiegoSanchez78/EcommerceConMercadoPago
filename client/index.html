@@ -1,28 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+        rel="stylesheet">
+
     <script src="https://sdk.mercadopago.com/js/v2"></script>
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/7290b3a29c.js" crossorigin="anonymous"></script>
+    <title>Ecommerce</title>
 </head>
+
 <body>
-    <div class="card-products-container">
+    <nav class="navhome">
+        <img class="logo"
+            src="https://static.vecteezy.com/system/resources/previews/003/043/711/non_2x/online-shop-logo-for-business-vector.jpg"
+            alt="">
+        <ul class="ulNav">
+    
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product-details.html">Product Details</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            
+        </ul>
+        <div class="social-icons">
+
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-lg" style="color: #243147;"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-lg" style="color: #243147;"></a></i>
+            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter fa-lg" style="color: #243147;"></i></a>
+        </div>
+    </nav>
+
+    <div class="card-products-container navpadding">
         <div class="card-products" id="shopContent"></div>
     </div>
-    <div class="cart-btn" id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></div>
+    <a class="cart-btnWhatsapp" href="https://wa.me/541163076853" target="_blank" class="whatsapp-button"><i class="fa-brands fa-whatsapp fa-lg"></i></a>
+    <div class="cart-btn" id="cart-btn"><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
     <span class="cart-counter" id="cart-counter"></span>
 
     <div class="nodal-overlay" id="modal-overlay"></div>
     <div class="modal-container" id="modal-container"></div>
 
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Atención al cliente</h3>
+                <p>+54 11 4419 7924</p>
+                <p><a href="https://wa.me/541144197924" target="_blank">Mensaje de Whatsapp</a></p>
+                <p><a href="mailto:infoar@isadoraonline.com">infoar@storeonline.com</a></p>
+                <p><a href="mailto:infoar@isadoraonline.com">Mandanos un mail</a></p>
+                <h4>Horarios de atención</h4>
+                <p>Lunes a Viernes de 9 a 18 hs,<br>Sábados de 9 a 14 hs</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contactanos</h3>
+                <ul>
+                    <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
+                    <li><a href="#cambios-devoluciones">Cambios y devoluciones</a></li>
+                    <li><a href="#medios-pago">Medios de pago</a></li>
+                    <li><a href="#info-envios">Información de envíos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Somos Isadora</h3>
+                <ul class="footer-links">
+                    <li><a href="#sobre-isadora">Sobre Store Online</a></li>
+                    <li><a href="#terminos-condiciones">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Seguinos</h3>
+                <p>
+                    <a href="https://www.instagram.com" target="_blank">Instagram</a><br>
+                    <a href="https://www.tiktok.com" target="_blank">TikTok</a><br>
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                </p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2023 Store Online. Todos los derechos reservados.</p>
+    </footer>
+
     <script src="./js/storage.js"></script>
     <!-- <script src="./js/product-details.js"></script> -->
     <script src="./js/index.js"></script>
     <script src="./js/cart.js"></script>
-    
+
 </body>
+
 </html>

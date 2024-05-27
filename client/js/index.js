@@ -54,7 +54,7 @@ let cart = [];
     
 
     const buyButton = document.createElement("button");
-    buyButton.innerText = "Comprar";
+    buyButton.innerText = "agregar al carrito";
 
     content.append(buyButton);
 

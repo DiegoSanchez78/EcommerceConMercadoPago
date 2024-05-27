@@ -1,10 +1,24 @@
 :root {
-    --color1: #dad5b7;
-    --color2: #c2b79b;
+    --color1: #fef1e0;
+    --color2: #f6e6ce;
     --color3: #665e52;
-    --color4: #3a5f6f;
-    --color5: #243757;
+    --color4: #3b2e2a;
+    --color5: #3f0632;
+    --color6: #a47f1a;
+    --color7: #fcfaf7;
+    --color8:gold;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+  
+  font-style: normal;
+}
+
 
 
 .card-products-container {
@@ -12,7 +26,7 @@
     flex-wrap: wrap;
     /* justify-content: space-evenly; */
     align-items: center;
-    background-color:var(--color1);
+    background-color:var(--color7);
     padding: 10px;
     border-radius: 5px;
     width: 100%;
@@ -22,13 +36,15 @@
 
 h3 {
     width: 13rem;
-    height: 2rem;
+    height: 3rem;
     color: var(--color4);
+    font-size: 0.8rem;
+    padding: 6px;
 }
 .card-products {
     margin: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 5px;
     text-align: center;
     display: flex;
@@ -100,13 +116,32 @@ h3 {
     border: none;
     border-radius: 50%;
     padding: 10px;
-    background-color:var(--color2);
+    background-color:var(--color8);
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .cart-btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.20);
+}
+
+.cart-btnWhatsapp {
+    position: fixed;
+    top: 80vh;
+    right: 40px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    background-color:rgb(16, 186, 16);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+.cart-btnWhatsapp:hover {
+    transform: scale(1.20);
 }
 .card-products button:active {
     transform: scale(0.95);
@@ -115,7 +150,7 @@ h3 {
 
 .modal-overlay {
     display: none;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     top: 0;
     left: 0;
@@ -339,7 +374,145 @@ h3 {
 
 }
 
+.titleDescription {
+    font-weight: bold;
+    font-size: 20px;
+    color:var(--color5);
+    text-align: center;
+    margin: 10px 0px;
+}
+
 /* .product-details {
    background-color: var(--color1);
 } */
 
+/*nav*/
+
+.ulNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+/*   https://www.youtube.com/watch?v=G1uDmIaOnsc  */
+
+.navhome {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: var(--color2);
+    height: 64px;
+    z-index: 1000;
+    width: 100%;
+    border-bottom:var(--color6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.navpadding {
+    padding: 64px 0px;
+}
+
+.navhome a {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.navhome a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -6px;
+    left: 0;
+    background-color: var(--color5) ;
+    transform: scaleX(0);
+    transition: transform .3s;
+    transform-origin: right;
+    border-radius: 40px;
+}
+
+.navhome a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+li {
+    list-style: none;
+    margin:0px 10px;
+}
+
+a {
+    color: var(--color5);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/*logo*/
+
+.logo {
+    height: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+footer {
+    background-color:var(--color1);
+    color: var(--color5);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    padding: 10px;
+    text-align: -webkit-center;
+}
+
+.footer-section h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    text-align: center;
+    color:var(--color5);
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
