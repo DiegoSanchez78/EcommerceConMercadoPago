@@ -1,57 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products by Category</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
-        rel="stylesheet">
-
-    <script src="https://sdk.mercadopago.com/js/v2"></script>
-    <script src="https://kit.fontawesome.com/7290b3a29c.js" crossorigin="anonymous"></script>
-    <title>Ecommerce</title>
 </head>
-
 <body>
     <nav class="navhome">
         <img class="logo"
             src="https://static.vecteezy.com/system/resources/previews/003/043/711/non_2x/online-shop-logo-for-business-vector.jpg"
             alt="">
         <ul class="ulNav">
-    
             <li><a href="index.html">Home</a></li>
             <li><a href="product-details.html">Product Details</a></li>
             <li><a href="cart.html">Cart</a></li>
             <li><a href="checkout.html">Checkout</a></li>
-            
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
         <div class="social-icons">
-            <i class="fa-brands fa-facebook fa-lg" style="color: #243147;"></i>
-            <i class="fa-brands fa-instagram fa-lg" style="color: #243147;"></i>
-            <i class="fa-brands fa-twitter fa-lg" style="color: #243147;"></i>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter fa-lg"></i></a>
         </div>
     </nav>
 
-    <section class="product-details">
-        <h2 class="titleDescription">Product Details</h1>
-
-        <div id="detalles">
-
-        </div>
-        <a class="cart-btnWhatsapp" href="https://wa.me/541163076853" target="_blank" class="whatsapp-button"><i class="fa-brands fa-whatsapp fa-lg"></i></a>
-        <div class="cart-btn" id="cart-btn"><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
-        <span class="cart-counter" id="cart-counter"></span>
-
-        <!-- <div class="cart-btn" id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></div>
-        <span class="cart-counter" id="cart-counter"></span> -->
-
-        <div class="nodal-overlay" id="modal-overlay"></div>
-        <div class="modal-container" id="modal-container"></div>
+    <section class="categories-container">
+        <h2>Categories</h2>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         
+        <div class="categories" id="categories">
+            <!-- Categories will be dynamically added here -->
+        </div>
+    </section>
+
+    <section class="products-container" id="products-container">
+        <!-- Products will be dynamically added here -->
     </section>
 
     <footer>
@@ -68,8 +56,8 @@
             <div class="footer-section">
                 <h3>Contactanos</h3>
                 <ul>
-                    <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
-                    <li><a href="#cambios-devoluciones">Cambios y devoluciones</a></li>
+                    <li><a href="faq.html">Preguntas frecuentes</a></li>
+                    <li><a href="changes-returns.html">Cambios y devoluciones</a></li>
                     <li><a href="#medios-pago">Medios de pago</a></li>
                     <li><a href="#info-envios">Información de envíos</a></li>
                 </ul>
@@ -93,10 +81,6 @@
         <p class="copyright">&copy; 2023 Store Online. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="./js/storage.js"></script>
-    <script src="./js/cart.js"></script>
-    <script src="./js/product-details.js"></script>
-    <script src="./js/index.js"></script>
-   
+    <script src="./js/products-by-category.js"></script>
 </body>
- </html>
+</html>

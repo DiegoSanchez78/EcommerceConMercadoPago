@@ -1,24 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
-    loadCartFromLocalStorage();
+    loadCartFromLocalStorage(); // Cargar carrito al iniciar
+    displayCartCounter(); // Actualizar el contador
+
     const detallesContainer = document.getElementById("detalles");
 
-    // Obtén el ID del producto de la URL
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
-    console.log("ID del producto:", productId);
 
-    // Realiza una solicitud para obtener los detalles del producto con el ID dado
-    // Esta solicitud podría ser a una API o a un archivo JSON que contenga los detalles del producto
     fetch(`https://api.escuelajs.co/api/v1/products/${productId}`)
         .then(response => response.json())
         .then(data => {
-            console.log("Detalles del producto:", data);
-
-            // Muestra los detalles del producto en el contenedor de detalles
             if (data) {
                 const product = data;
-                console.log("Detalles del producto:", product);
-
                 detallesContainer.innerHTML = `
                     <h2 class="titleDescription">${product.title}</h2>
                     <div class="img-and-details">
@@ -26,12 +19,37 @@ document.addEventListener("DOMContentLoaded", function() {
                         <p>${product.description}</p>
                     </div>
                     <div class="price">
-                    <p class="titleDescription">Precio $ ${product.price}</p>
+                        <p class="titleDescription">Precio $ ${product.price}</p>
                     </div>
+                    <button id="add-to-cart-btn" class="btn-primary">Agregar al carrito</button>
                 `;
+
+                const addToCartBtn = document.getElementById("add-to-cart-btn");
+                addToCartBtn.addEventListener("click", () => {
+                    const repeat = cart.some((repeatProduct) => repeatProduct.id === product.id);
+                    if (repeat) {
+                        cart.forEach((productCart) => {
+                            if (productCart.id === product.id) {
+                                productCart.quanty += 1;
+                            }
+                        });
+                    } else {
+                        cart.push({
+                            ...product,
+                            quanty: 1,
+                        });
+                    }
+                    saveCartToLocalStorage();
+                    displayCartCounter();
+                });
             } else {
                 detallesContainer.innerHTML = `<p>No se encontraron detalles para este producto.</p>`;
             }
         })
         .catch(error => console.error("Error al obtener los detalles del producto:", error));
+
+    const cartBtn = document.getElementById("cart-btn");
+    if (cartBtn) {
+        cartBtn.addEventListener("click", displayCart);
+    }
 });

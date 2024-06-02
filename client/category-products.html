@@ -15,44 +15,35 @@
     <script src="https://kit.fontawesome.com/7290b3a29c.js" crossorigin="anonymous"></script>
     <title>Ecommerce</title>
 </head>
-
 <body>
     <nav class="navhome">
         <img class="logo"
             src="https://static.vecteezy.com/system/resources/previews/003/043/711/non_2x/online-shop-logo-for-business-vector.jpg"
             alt="">
         <ul class="ulNav">
-    
             <li><a href="index.html">Home</a></li>
             <li><a href="product-details.html">Product Details</a></li>
             <li><a href="cart.html">Cart</a></li>
             <li><a href="checkout.html">Checkout</a></li>
-            
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
         <div class="social-icons">
-            <i class="fa-brands fa-facebook fa-lg" style="color: #243147;"></i>
-            <i class="fa-brands fa-instagram fa-lg" style="color: #243147;"></i>
-            <i class="fa-brands fa-twitter fa-lg" style="color: #243147;"></i>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter fa-lg"></i></a>
         </div>
     </nav>
 
-    <section class="product-details">
-        <h2 class="titleDescription">Product Details</h1>
-
-        <div id="detalles">
-
-        </div>
-        <a class="cart-btnWhatsapp" href="https://wa.me/541163076853" target="_blank" class="whatsapp-button"><i class="fa-brands fa-whatsapp fa-lg"></i></a>
-        <div class="cart-btn" id="cart-btn"><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
-        <span class="cart-counter" id="cart-counter"></span>
-
-        <!-- <div class="cart-btn" id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></div>
-        <span class="cart-counter" id="cart-counter"></span> -->
-
-        <div class="nodal-overlay" id="modal-overlay"></div>
-        <div class="modal-container" id="modal-container"></div>
-        
+    <section class="card-products-container navpadding">
+        <div class="card-products" id="shopContent"></div>
     </section>
+
+    <a class="cart-btnWhatsapp" href="https://wa.me/541163076853" target="_blank" class="whatsapp-button"><i class="fa-brands fa-whatsapp fa-lg"></i></a>
+    <div class="cart-btn" id="cart-btn"><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
+    <span class="cart-counter" id="cart-counter"></span>
+
+    <div class="nodal-overlay" id="modal-overlay"></div>
+    <div class="modal-container" id="modal-container"></div>
 
     <footer>
         <div class="footer-container">
@@ -68,8 +59,8 @@
             <div class="footer-section">
                 <h3>Contactanos</h3>
                 <ul>
-                    <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
-                    <li><a href="#cambios-devoluciones">Cambios y devoluciones</a></li>
+                    <li><a href="faq.html">Preguntas frecuentes</a></li>
+                    <li><a href="changes-returns.html">Cambios y devoluciones</a></li>
                     <li><a href="#medios-pago">Medios de pago</a></li>
                     <li><a href="#info-envios">Información de envíos</a></li>
                 </ul>
@@ -94,9 +85,9 @@
     </footer>
 
     <script src="./js/storage.js"></script>
+    <script src="./js/category-products.js"></script>
     <script src="./js/cart.js"></script>
     <script src="./js/product-details.js"></script>
-    <script src="./js/index.js"></script>
-   
+
 </body>
- </html>
+</html>

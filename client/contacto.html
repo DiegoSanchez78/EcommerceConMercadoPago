@@ -10,10 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
         rel="stylesheet">
-
-    <script src="https://sdk.mercadopago.com/js/v2"></script>
     <script src="https://kit.fontawesome.com/7290b3a29c.js" crossorigin="anonymous"></script>
-    <title>Ecommerce</title>
+    <title>Contact Us</title>
 </head>
 
 <body>
@@ -22,36 +20,44 @@
             src="https://static.vecteezy.com/system/resources/previews/003/043/711/non_2x/online-shop-logo-for-business-vector.jpg"
             alt="">
         <ul class="ulNav">
-    
+
             <li><a href="index.html">Home</a></li>
             <li><a href="product-details.html">Product Details</a></li>
             <li><a href="cart.html">Cart</a></li>
             <li><a href="checkout.html">Checkout</a></li>
-            
+            <li><a href="contact.html">Contact Us</a></li>
+
         </ul>
         <div class="social-icons">
-            <i class="fa-brands fa-facebook fa-lg" style="color: #243147;"></i>
-            <i class="fa-brands fa-instagram fa-lg" style="color: #243147;"></i>
-            <i class="fa-brands fa-twitter fa-lg" style="color: #243147;"></i>
+
+            <a href="https://www.facebook.com" target="_blank"><i
+                    class="fa-brands fa-facebook fa-lg"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i
+                    class="fa-brands fa-instagram fa-lg"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter fa-lg"></i></a>
         </div>
     </nav>
 
-    <section class="product-details">
-        <h2 class="titleDescription">Product Details</h1>
-
-        <div id="detalles">
-
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+        <div class="message-container">
+            <p id="messageText"></p>
         </div>
-        <a class="cart-btnWhatsapp" href="https://wa.me/541163076853" target="_blank" class="whatsapp-button"><i class="fa-brands fa-whatsapp fa-lg"></i></a>
-        <div class="cart-btn" id="cart-btn"><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
-        <span class="cart-counter" id="cart-counter"></span>
-
-        <!-- <div class="cart-btn" id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></div>
-        <span class="cart-counter" id="cart-counter"></span> -->
-
-        <div class="nodal-overlay" id="modal-overlay"></div>
-        <div class="modal-container" id="modal-container"></div>
-        
     </section>
 
     <footer>
@@ -93,10 +99,7 @@
         <p class="copyright">&copy; 2023 Store Online. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="./js/storage.js"></script>
-    <script src="./js/cart.js"></script>
-    <script src="./js/product-details.js"></script>
-    <script src="./js/index.js"></script>
-   
+    <script src="./js/contact.js"></script>
 </body>
- </html>
+
+</html>
